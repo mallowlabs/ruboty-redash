@@ -1,8 +1,6 @@
-require "ruboty/redash/version"
+# frozen_string_literal: true
 
-module Ruboty
-  module Redash
-    class Error < StandardError; end
-    # Your code goes here...
-  end
-end
+require "ruboty/redash/version"
+require "ruboty/redash/client"
+require "ruboty/redash/actions/show"
+require "ruboty/handlers/redash"

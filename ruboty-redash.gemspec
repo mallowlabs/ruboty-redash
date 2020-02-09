@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["mallowlabs"]
   spec.email         = ["mallowlabs@gmail.com"]
 
-  spec.summary       = %q{A ruboty plugin that fetch data of Redash.}
-  spec.description   = %q{A ruboty plugin that fetch data of Redash.}
+  spec.summary       = %q{A ruboty plugin that fetches data from Redash.}
+  spec.description   = %q{A ruboty plugin that fetches data from Redash.}
   spec.homepage      = "https://github.com/mallowlabs/ruboty-redash"
   spec.license       = "MIT"
 
@@ -37,6 +37,8 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "ruboty"
+  spec.add_dependency "faraday"
   spec.add_development_dependency "bundler", "~> 1.17"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "rspec"
 end

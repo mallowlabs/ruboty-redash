@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Ruboty
   module Redash
     VERSION = "0.1.0"
