@@ -26,7 +26,7 @@ module Ruboty
 
       def query_result(result_id)
         res = client.get("/api/query_results/#{result_id}")
-        JSON.parse(res.body)
+        parse_json(res)
       end
 
       def latest_query_data_id(query_id)
@@ -36,7 +36,15 @@ module Ruboty
 
       def query(query_id)
         res = client.get("/api/queries/#{query_id}")
-        JSON.parse(res.body)
+        parse_json(res)
+      end
+
+      def parse_json(response)
+        unless response.success?
+          warn response.body
+          throw 'fetch error'
+        end
+        JSON.parse(response.body)
       end
 
       def build

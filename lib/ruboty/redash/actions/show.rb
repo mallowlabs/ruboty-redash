@@ -11,9 +11,12 @@ module Ruboty
         end
 
         def call
+          throw 'config error: set REDASH_ROOT' unless redash_root
+
           data = Ruboty::Redash::Client.new(redash_root, redash_user_apikey).fetch(query_id)
           message.reply(reply_message(binding))
         rescue => e
+          warn "#{e.message}\n#{e.backtrace.join("\n")}"
           message.reply(e.message)
         end
 
