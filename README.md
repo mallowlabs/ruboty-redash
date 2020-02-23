@@ -54,6 +54,11 @@ In ERB, `data` format is below:
 
 columns names ​​vary by environments.
 
+## Environment Variables
+
+* `REDASH_ROOT`: Redash URL root (ex: https://your.redash.host)
+* `REDASH_USER_APIKEY`: Your Redash API key
+
 ## Development
 
 How to run specs:
