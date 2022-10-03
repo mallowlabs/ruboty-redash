@@ -48,7 +48,7 @@ module Ruboty
       end
 
       def build
-        Faraday.new(url: root) do |builder|
+        Faraday.new(url: root, proxy: ENV['REDASH_HTTP_PROXY_URL']) do |builder|
           builder.authorization('Key', user_apikey) if user_apikey
           builder.adapter Faraday.default_adapter
         end

@@ -58,6 +58,7 @@ columns names ​​vary by environments.
 
 * `REDASH_ROOT`: Redash URL root (ex: https://your.redash.host)
 * `REDASH_USER_APIKEY`: Your Redash API key
+* `REDASH_HTTP_PROXY_URL`: (Optional) HTTP Proxy URL
 
 ## Development
 
